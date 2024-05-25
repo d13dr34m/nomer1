@@ -10,7 +10,12 @@ def f(x):
 
 x = np.linspace(-15, 5, 400)
 y = f(x)
-data = [{"x": x, "y": y} for x, y in zip(x, y)]
+z = list(x)
+v = list(y)
+data = {
+    "x": z,
+    "y": v
+}
 
 
 if not os.path.exists('results'):
