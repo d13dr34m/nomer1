@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 
 def f(x):
- return 100*np.sqrt(np.abs(1-0.001*x**2))+0.01*np.abs(x+10)
+ return 100*np.sqrt(np.abs(1-0.01*x**2))+0.01*np.abs(x+10)
 
 
 x = np.linspace(-15, 5, 400)
