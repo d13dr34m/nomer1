@@ -10,15 +10,19 @@ def f(x):
 
 x = np.linspace(-15, 5, 400)
 y = f(x)
-data = [{"x": x, "y": y} for x, y in zip(x, y)]
-
+z = list(x)
+v = list(y)
+Data = {
+    "x": z,
+    "y": v
+}
 if not os.path.exists('results'):
-     os.makedirs('results')
+    os.makedirs('results')
 
 with open('results/values.json', 'w') as file:
-json.dump(data, file)
+    json.dump(data, file)
 plt.figure(figsize=(16, 9))
-plt.plot(x, y, label='f(x)', color='k')
+plt.plot(x, y, label='f(x)', color='r')
 plt.title('График')
 plt.xlabel('x')
 plt.ylabel('f(x)')
